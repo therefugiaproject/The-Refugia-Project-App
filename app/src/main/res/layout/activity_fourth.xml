@@ -24,7 +24,7 @@
         android:layout_marginEnd="52dp"
         android:layout_marginRight="52dp"
         android:layout_marginBottom="52dp"
-        android:text="Step 2: Take a picture"
+        android:text="Step 1: Take a picture"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/image"
         app:layout_constraintEnd_toEndOf="parent" />

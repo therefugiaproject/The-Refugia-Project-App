@@ -19,21 +19,21 @@ public class ExtraActivity extends AppCompatActivity
         button.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                goToThirdActivity();
+                goToFourthActivity();
             }
 
         });
 
     }
 
-    private void goToThirdActivity() {
-        Intent intent = new Intent(this, ThirdActivity.class);
+    private void goToFourthActivity() {
+        Intent intent = new Intent(this, FourthActivity.class);
 
         startActivity(intent);
     }
 
     @Override
     public void onClick(View view) {
-        goToThirdActivity();
+        goToFourthActivity();
     }
 }

@@ -20,7 +20,7 @@ public class SecondActivity extends AppCompatActivity
             button.setOnClickListener(new View.OnClickListener() {
 
                 public void onClick(View v) {
-                    goToThirdActivity();
+                    goToFourthActivity();
                 }
 
             });
@@ -39,9 +39,9 @@ public class SecondActivity extends AppCompatActivity
         startActivity(intent);
     }
 
-    private void goToThirdActivity() {
+    private void goToFourthActivity() {
 
-            Intent intent = new Intent(this, ThirdActivity.class);
+            Intent intent = new Intent(this, FourthActivity.class);
 
             startActivity(intent);
 
@@ -50,7 +50,7 @@ public class SecondActivity extends AppCompatActivity
 
         @Override
         public void onClick(View view) {
-            goToThirdActivity();
+            goToFourthActivity();
         }
 
 

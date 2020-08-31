@@ -19,7 +19,6 @@
         <activity android:name=".SixthActivity" />
         <activity android:name=".FifthActivity" />
         <activity android:name=".FourthActivity" />
-        <activity android:name=".ThirdActivity" />
         <activity android:name=".SecondActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

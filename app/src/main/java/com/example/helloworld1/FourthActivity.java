@@ -30,6 +30,7 @@ public class FourthActivity extends AppCompatActivity
 
     String pathToFile;
     ImageView imageView;
+    Uri photoURI;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,7 +79,7 @@ public class FourthActivity extends AppCompatActivity
 
             if (photoFile!=null){
                 pathToFile = photoFile.getAbsolutePath();
-                Uri photoURI = FileProvider.getUriForFile(FourthActivity.this, "com.refugia.helloworld1.fileprovider", photoFile);
+                photoURI = FileProvider.getUriForFile(FourthActivity.this, "com.refugia.helloworld1.fileprovider", photoFile);
                 takePicture.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                 startActivityForResult(takePicture, 1);
             }
@@ -101,7 +102,12 @@ public class FourthActivity extends AppCompatActivity
     private void goToFifthActivity() {
 
         Intent intent = new Intent(this, FifthActivity.class);
-
+        if (photoURI == null){
+            intent.putExtra("uri", "Photo not taken");
+        }
+        else{
+            intent.putExtra("uri", photoURI.toString());
+        }
         startActivity(intent);
     }
 
