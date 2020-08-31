@@ -50,6 +50,9 @@ public class SixthActivity extends AppCompatActivity
                 // with action attribute as ACTION_SEND
                 Intent intent = new Intent(Intent.ACTION_SEND);
 
+                //following line makes it possible only for email apps to perform the action
+                intent.setType("message/rfc822");
+
                 // add three files to intent using putExtra function
                 intent.putExtra(Intent.EXTRA_EMAIL, new String[] { emailsend });
                 intent.putExtra(Intent.EXTRA_SUBJECT, emailsubject);
