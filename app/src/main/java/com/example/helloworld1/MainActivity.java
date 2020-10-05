@@ -23,14 +23,14 @@ public class MainActivity extends AppCompatActivity
         button.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                goToSecondActivity();
+                goToFourthActivity();
             }
 
         });
     }
-    private void goToSecondActivity() {
+    private void goToFourthActivity() {
 
-        Intent intent = new Intent(this, SecondActivity.class);
+        Intent intent = new Intent(this, FourthActivity.class);
 
         startActivity(intent);
 
@@ -39,6 +39,6 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onClick(View view) {
-        goToSecondActivity();
+        goToFourthActivity();
     }
 }
